@@ -22,8 +22,13 @@ class CustomScene: SKScene {
         // Create move action
         let actionDuration = 1.0
         let moveAction = SKAction.move(to: position, duration: actionDuration)
+        let turnAction = SKAction.rotate(byAngle: CGFloat.pi * 2, duration: actionDuration)
+        let groupAction = SKAction.group([moveAction, turnAction])
+        // crab.run(groupAction)
+        
+        
         
         // Run move action
-        crab.run(moveAction)
+        // crab.run(moveAction)
     }
 }
